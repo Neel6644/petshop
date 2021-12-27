@@ -1,0 +1,573 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+html{
+    font-size: 16px;
+}
+
+/* global */
+.pet-Title{
+    text-align: center;
+}
+.pet-Title h1{
+    font-size: 3.5rem;
+    color: #098596;
+}
+
+.pet-Title h2{
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+
+.navBar{
+    position: fixed;
+    width: 100%;
+    background-color: #098596;
+    z-index: 5;
+  
+}
+
+.navBar li{
+    display: inline-block;
+    padding:10px 15px;
+
+}
+
+.navBar li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: aliceblue;
+    position: relative;
+    display: block;
+    padding: 10px 0;
+    transition: color 0.5s;
+}
+
+.navBar li a span{
+    width: 0;
+    position: absolute;
+    height: 2px;
+    background-color: aliceblue;
+    bottom: 0;
+    margin-top: 10px;
+    transition: 0.5s;
+}
+
+.navBar li:hover a span{
+    width: 100%;
+}
+
+.navBar li:hover a{
+    color: black;
+}
+
+.banner{
+    background:linear-gradient(rgba(0,0,0,0.5),#09859691),url(Resourse/images/BannerImage.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    top:60px;
+    position: relative;
+   
+}
+
+.banner-text{
+    text-align: center;
+    color: aliceblue;   
+    padding-top: 180px;
+  
+}
+
+.banner-text h1{
+    font-size: 150px;
+}
+
+.banner-text p{
+    font-size: 25px;
+    font-style: italic;
+}
+
+.banner-button{
+    margin: 50px auto 0;
+}
+
+.banner-button a{
+    width: 150px;
+    margin: 0 10px;
+    text-decoration: none;
+    color: aliceblue;
+    display: inline-block;
+    border: 0.5px solid aliceblue;
+    padding:15px 0;
+   
+    position: relative;
+    z-index: 1;
+    transition: color 0.5s;
+}
+
+.banner-button a span{
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: aliceblue;
+    z-index: -1;
+    transition: 0.5s; 
+}
+
+.banner-button a:hover span{
+    width: 100%;
+}
+
+.banner-button a:hover{
+    color: black;
+}
+
+
+
+/* Feature */
+
+
+#features{
+    width: 100%;
+    height: 100vh;
+    padding: 30px 0;
+    position: relative;
+    top: 60px;
+}
+
+
+
+.feature-box{
+    width: 80%;
+    display: flex;
+    margin: 30px auto;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+.feature-content{
+    flex-basis: 50%;
+}
+
+.feature-content h3{
+    text-align: center;
+}
+
+.feature-content-desc{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px;
+    align-items: center;
+}
+.feature-icon .fa{
+    color: #098596;
+    margin: 10px;
+    font-size: 40px;
+}
+
+.feature-text p{
+    text-align: justify;
+}
+
+
+
+.feature-image{
+    flex-basis: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+
+.feature-image img{
+    width: 70%;
+    height: 425px;
+    border-radius: 10px;
+    background:linear-gradient(rgba(0,0,0,0.5),#09859691),url(Resourse/images/experienceStaff.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+
+/* Services */
+
+#services{
+    width: 100%;
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding: 30px auto;
+    background-color: #efefef96;
+}
+
+.services-box{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px auto;
+    justify-content: space-evenly;
+    
+}
+
+.single-service{
+    flex-basis: 40%;
+    margin: 10px;
+    position: relative;
+}
+
+.single-service img{
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    background:linear-gradient(rgba(0,0,0,0.5),#09859691);
+    opacity: 0;
+    transition: 1s;
+}
+
+.single-service:hover .overlay{
+    opacity: 1;
+}
+
+.services-text{
+    position: absolute;
+    bottom: 0;
+    width: 80%;
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+    color: aliceblue;
+    transition: 1s;
+    opacity: 0;
+}
+
+.services-text h4{
+    font-size: 1.5rem;
+}
+
+.services-text hr{
+    width: 50%;
+    height: 2px;
+    background-color: aliceblue;
+    border:0;
+    margin: 0.5rem auto;
+}
+
+.services-text p{
+    font-style: italic;
+}
+
+.single-service:hover .services-text{
+    bottom: 40%;
+    opacity: 1;
+}
+
+/* feedback */
+#feedBack{
+    width: 100%;
+    padding: 30px 0;
+}
+
+.feedBack-box{
+    width:80%;
+    margin:10px auto;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.feedBack-box .single-feedBack{
+    flex-basis: 28%;
+    border:1.5px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    transition: transform 1s;
+    box-shadow: 0 10px 20px 3px #77767696;
+    cursor: pointer;
+}
+
+.single-feedBack:hover{
+    transform: translateY(-5px);
+}
+
+.single-feedBack img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.single-feedBack .user{
+    display: flex;
+    width: 100%;
+}
+
+.single-feedBack .user .user-info{
+    margin-left: 10px;
+}
+
+.single-feedBack .user .user-info .fa-twitter{
+    color: #27c0ff;
+    margin-left: 5px;
+}
+
+.single-feedBack .user .user-info h6{
+    color: #098596;
+    margin-top: 5px;
+    
+}
+
+.single-feedBack p{
+    text-align: justify;
+
+}
+
+/* Contact */
+#footerContact{
+    width: 100%;
+    padding: 30px 0 0;
+    background-color: #efefef96;
+}
+
+.footerContact-Box{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 50px auto;
+
+}
+
+.footerContact-Box .contactLeft, .footerContact-Box .contactRight{
+    flex-basis: 40%;
+}
+
+.footerContact-Box .contactRight{
+    text-align: right;
+}
+
+.social-links{
+    /* display: flex;
+    justify-content: center; */
+    text-align: center;
+}
+
+.social-links .fa{
+    margin: 5px 10px 0;
+    border: 2px solid #098596;
+    padding: 5px;
+    height: 30px;
+    width: 30px;
+    font-size: 30px;
+    color: #098596 ;
+    border-radius: 10px;
+    transition: transfrom .5s;
+}
+
+.social-links .fa:hover{
+    background-color: #098596;
+    color: white;
+    transform: translateY(-5px);
+}
+
+.contactLeft p,.contactRight p{
+    margin: 5px 0;
+}
+
+.contactRight .fa{
+    margin-left: 10px;
+    color: #098596;
+}
+
+.contactLeft .fa{
+    margin-right: 10px;
+    color: #098596;
+}
+
+.copyRight{
+    font-size: 14px;
+    margin:5px;
+}
+
+
+
+/* media quary */
+@media only screen and (min-device-width: 320px)
+                and (max-device-width:464px) {
+    /* Navigation */
+    .navBar li a{
+        font-size: 30px;
+    }
+
+    /* global */
+    .pet-Title h1{
+        font-size: 4rem;
+    }
+
+    .pet-Title h2{
+        font-size: 2.5rem;
+        margin-top: 0.8rem;
+    }
+    /* banner */
+   .banner{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+   }
+
+   .banner-text{
+       padding-top: 0px;
+   }
+
+   .banner-text h1{
+       font-size: 200px;
+   }
+
+   .banner-text p{
+       font-size: 35px;
+    }
+
+    .banner-button a{
+        width: 175px;
+        font-size: 25px;
+        margin: 0 20px;
+    }
+
+    #features{
+        padding:60px 0;
+        height: auto;
+    }
+
+    .feature-box {
+        width: 100%;
+        margin: 30px auto;
+        display: inline-block;
+        overflow: hidden;
+    }
+
+    .feature-content-desc{
+        display: inline-flex;
+        margin: 10px;
+        align-items: center;
+    }
+
+    .feature-content h3 {
+        text-align: start;
+        font-size: 3rem;
+        margin: 15px;
+    }
+
+    .feature-icon .fa{
+        font-size: 65px;
+    }
+
+    .feature-text p{
+        font-size: 1.5rem;
+        margin: 10px;
+    }
+
+    .feature-image img{
+        width: 750px;
+    }
+  
+
+    /* Services */
+    #services{
+        padding:60px 0;
+        height: auto;
+    }
+    .services-box{
+        display: inline;
+    }
+
+    .services-box .single-service{
+      margin: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .single-service img , .single-service .overlay {
+        width: 750px;
+        height: 500px;
+    }
+
+    .services-text h4{
+        font-size: 2.5rem;
+    }
+    
+    .services-text hr{
+        width: 30%;
+        margin: 0.5rem auto;
+    }
+    
+    .services-text p{
+        font-size: 1.5rem;
+    }
+
+
+    /* feedback */
+    .feedBack-box{
+        display: inline;
+    }
+
+    .single-feedBack{
+        width: 70%;
+        height: 150px;
+        margin: 20px auto;
+    }
+
+    .single-feedBack img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .single-feedBack .user .user-info {
+        margin-left: 20px;
+    }
+    .user-info h4{
+        font-size: 2rem;
+    }
+
+    .user-info h6{
+        font-size: 1.5rem;
+    }
+
+    .single-feedBack p {
+        font-size: 1.5rem;
+        margin: 5px;
+    }
+
+
+    /* contect */
+    .contactLeft h3, .contactRight h3{ 
+        font-size: 1.5rem;
+    }
+
+    .social-links .fa {
+        margin: 0;
+        padding: 15px;
+        height: 35px;
+        width: 35px;
+        font-size: 15px
+    }
+
+    .copyRight{
+        font-size: 10px;
+    }
+}
+
